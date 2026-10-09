@@ -3,174 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aurora Tech — Finished games, not pitches.</title>
-<meta name="description" content="Aurora Tech builds commercial single-player games for Steam and the Epic Games Store.">
-<meta property="og:title" content="Aurora Tech">
-<meta property="og:description" content="Finished games, not pitches. Single-player games for Steam and the Epic Games Store.">
+<title>Aurora Tech — Independent studio</title>
+<meta name="description" content="Aurora Tech is an early-stage independent studio building single-player games and AI-assisted developer tools. Work is in development and not publicly released.">
+<link rel="canonical" href="https://www.auroratech-ai.com/">
 <meta name="theme-color" content="#07090d">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2307090d'/><path d='M14 46 L32 14 L50 46' fill='none' stroke='%2367e8b9' stroke-width='6' stroke-linejoin='round'/></svg>">
-<style>
-:root{
-  --bg:#07090d; --bg2:#0e1218; --line:rgba(255,255,255,.09);
-  --text:#e9edf2; --muted:#9aa4b2; --accent:#67e8b9; --accent2:#7aa7ff;
-  --max:1120px;
+<meta property="og:site_name" content="Aurora Tech">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.auroratech-ai.com/">
+<meta property="og:title" content="Aurora Tech">
+<meta property="og:description" content="Early-stage independent studio. Single-player games and AI-assisted developer tools, still in development.">
+<meta property="og:image" content="https://www.auroratech-ai.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aurora Tech. Early-stage independent studio.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aurora Tech">
+<meta name="twitter:description" content="Early-stage independent studio. Single-player games and AI-assisted developer tools, still in development.">
+<meta name="twitter:image" content="https://www.auroratech-ai.com/og-image.png">
+<meta name="twitter:image:alt" content="Aurora Tech. Early-stage independent studio.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" href="/hero.jpg">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Aurora Tech",
+  "url": "https://www.auroratech-ai.com/",
+  "email": "jeff@auroratech-ai.com",
+  "description": "Early-stage independent studio building single-player games and AI-assisted developer tools."
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-.label{font-size:.78rem;letter-spacing:.28em;font-weight:600;color:var(--accent);text-transform:uppercase}
-h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.08}
-
-/* nav */
-header{position:fixed;inset:0 0 auto 0;z-index:10;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-header.scrolled{background:rgba(7,9,13,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{font-weight:700;font-size:1.1rem;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
-.brand i{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
-nav ul{display:flex;gap:34px;list-style:none}
-nav ul a{font-size:.95rem;color:#d3d9e1;transition:color .2s}
-nav ul a:hover{color:#fff}
-
-/* hero */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
-  background:#05070a url("hero.jpg") center 40%/cover no-repeat}
-.hero::before{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(5,7,10,.55) 0%,rgba(5,7,10,.15) 35%,rgba(5,7,10,.55) 70%,var(--bg) 100%)}
-.hero .wrap{position:relative;width:100%;padding-bottom:14vh}
-.hero h1{font-size:clamp(2.8rem,8vw,6.4rem);margin:18px 0 22px;max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.4)}
-.hero p.sub{font-size:clamp(1rem,1.6vw,1.2rem);color:#d6dde6;letter-spacing:.04em}
-.scroll{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(var(--accent),transparent);opacity:.7}
-
-/* sections */
-section.block{padding:130px 0;border-top:1px solid var(--line)}
-section.alt{background:var(--bg2)}
-.head h2{font-size:clamp(2rem,4.6vw,3.4rem);margin-top:16px;max-width:18ch}
-
-/* work */
-.games{margin-top:64px;display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
-.game{position:relative;border:1px solid var(--line);border-radius:14px;padding:30px 28px 28px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));overflow:hidden;transition:transform .3s,border-color .3s}
-.game:hover{transform:translateY(-4px);border-color:rgba(103,232,185,.35)}
-.game .art{height:150px;border-radius:10px;margin-bottom:26px;position:relative;overflow:hidden}
-.g1 .art{background:radial-gradient(120% 90% at 20% 110%,#2c6b78 0,transparent 60%),linear-gradient(180deg,#1b2a3a,#0b141c)}
-.g1 .art::after{content:"";position:absolute;left:0;right:0;bottom:38%;height:1px;background:rgba(200,230,240,.35)}
-.g2 .art{background:radial-gradient(14px 14px at 30% 45%,#ffcf7a,transparent),radial-gradient(10px 10px at 62% 30%,#ffb35c,transparent),radial-gradient(12px 12px at 78% 60%,#ffd890,transparent),radial-gradient(100% 80% at 50% 120%,#3a2340,transparent),linear-gradient(180deg,#160f1f,#0c0911)}
-.g3 .art{background:radial-gradient(85% 75% at 50% 125%,#5b8cff 0,#2a56c9 45%,#132b6b 62%,rgba(90,140,255,.25) 64%,transparent 70%),radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 70% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 45% 55%,#cfe0ff,transparent),radial-gradient(1px 1px at 85% 45%,#fff,transparent),#05070d}
-.game .num{font-size:.8rem;color:var(--muted);letter-spacing:.2em}
-.game h3{font-size:1.55rem;margin:8px 0 6px}
-.game .tags{font-size:.88rem;color:var(--accent);margin-bottom:14px}
-.game p{color:#c2cad5;font-size:.98rem}
-.game .meta{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);letter-spacing:.04em}
-
-/* studio */
-.studio{display:grid;grid-template-columns:1.25fr 1fr;gap:80px;align-items:start}
-.studio p.body{margin-top:28px;font-size:1.12rem;color:#c9d1db;max-width:56ch}
-.facts{list-style:none;border-top:1px solid var(--line);margin-top:8px}
-.facts li{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
-.facts span{color:var(--muted);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase}
-.facts strong{font-weight:600;text-align:right}
-
-/* contact */
-.contact{text-align:center}
-.contact .head h2{margin-left:auto;margin-right:auto}
-.contact p{color:var(--muted);margin-top:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;margin-top:40px;padding:16px 34px;border-radius:999px;background:var(--accent);color:#04120c;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 0 0 rgba(103,232,185,0)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(103,232,185,.3)}
-.mail{display:block;margin-top:18px;color:#c9d1db;font-size:.95rem}
-.mail:hover{color:#fff}
-
-footer{border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-@media (max-width:900px){
-  .games{grid-template-columns:1fr}
-  .studio{grid-template-columns:1fr;gap:40px}
-  section.block{padding:96px 0}
-}
-@media (max-width:560px){
-  .wrap{padding:0 20px}
-  nav ul{gap:18px}
-  nav ul a{font-size:.88rem}
-  .brand{font-size:1rem}
-  .hero .wrap{padding-bottom:12vh}
-  section.block{padding:80px 0}
-  .games{margin-top:44px}
-  .facts li{flex-direction:column;gap:4px}
-  .facts strong{text-align:left}
-}
-</style>
+</script>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 
 <header id="top">
-  <nav class="wrap">
-    <a class="brand" href="#"><i></i>Aurora Tech</a>
+  <nav class="wrap" aria-label="Primary">
+    <a class="brand" href="/"><i aria-hidden="true"></i>Aurora Tech</a>
     <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#studio">Studio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/#studio">Studio</a></li>
+      <li><a href="/#practice">Practice</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+<main id="content">
   <section class="hero">
     <div class="wrap">
       <div class="label">Aurora Tech</div>
-      <h1>Finished games, not pitches.</h1>
-      <p class="sub">Steam · Epic Games Store</p>
+      <h1>Building quietly.</h1>
+      <p class="lead">An early-stage independent studio. We build single-player games and AI-assisted developer tools, with Claude and other AI tools in the workflow.</p>
+      <p class="status">
+        <span>In development</span>
+        <span>Not publicly released</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:jeff@auroratech-ai.com?subject=Hello%20Aurora%20Tech">Contact us</a>
+        <a class="mail" href="mailto:jeff@auroratech-ai.com">jeff@auroratech-ai.com</a>
+      </div>
     </div>
     <div class="scroll" aria-hidden="true"></div>
   </section>
 
-  <section class="block" id="work">
-    <div class="wrap">
+  <section class="block" id="studio">
+    <div class="wrap studio">
       <div class="head">
-        <div class="label">Selected</div>
-        <h2>Three games in production.</h2>
+        <div class="label">The studio</div>
+        <h2>A small team, early in the work.</h2>
+        <p class="body">Aurora Tech is an early-stage independent studio — a small team building single-player games and AI-assisted developer tools. Claude and other AI tools are part of the daily workflow: drafting, code, and the review that follows.</p>
+        <p class="body">The work is still in development and is not publicly released. Until something is public, this site will not name it or show it.</p>
       </div>
-      <div class="games">
-        <article class="game g1">
-          <div class="art" aria-hidden="true"></div>
-          <div class="num">01</div>
-          <h3>Salt Meridian</h3>
-          <div class="tags">Exploration — Steam</div>
-          <p>A quiet coastal survey. Chart a cold harbor, keep the boat running, and decide what gets brought back.</p>
-          <div class="meta">2026 · Exploration · Steam</div>
-        </article>
-        <article class="game g2">
-          <div class="art" aria-hidden="true"></div>
-          <div class="num">02</div>
-          <h3>Paper Lanterns</h3>
-          <div class="tags">Narrative — Epic</div>
-          <p>A story told one lantern at a time. Light the way through a night market and choose whose voices carry.</p>
-          <div class="meta">2026 · Narrative · Epic</div>
-        </article>
-        <article class="game g3">
-          <div class="art" aria-hidden="true"></div>
-          <div class="num">03</div>
-          <h3>Low Orbit</h3>
-          <div class="tags">Simulation — Steam · Epic</div>
-          <p>Keep a small station alive above the clouds. Balance power, supplies, and the crew who depend on both.</p>
-          <div class="meta">2026 · Simulation · Steam · Epic</div>
-        </article>
-      </div>
+      <ul class="facts">
+        <li><span>Studio</span><strong>Independent, early-stage</strong></li>
+        <li><span>Team</span><strong>Small</strong></li>
+        <li><span>Work</span><strong>Single-player games and developer tools</strong></li>
+        <li><span>Status</span><strong>In development, not released</strong></li>
+      </ul>
     </div>
   </section>
 
-  <section class="block alt" id="studio">
-    <div class="wrap studio">
+  <section class="block alt" id="practice">
+    <div class="wrap">
       <div class="head">
-        <div class="label">The Studio</div>
-        <h2>A small team, shipping on two stores.</h2>
-        <p class="body">Aurora Tech builds commercial single-player games for Steam and the Epic Games Store. The production loop covers systems, tools, narrative drafts, and the code that holds a build together.</p>
+        <div class="label">How we work</div>
+        <h2>AI in the workflow.</h2>
       </div>
-      <ul class="facts">
-        <li><span>Platforms</span><strong>Steam and Epic</strong></li>
-        <li><span>Focus</span><strong>Single-player, shipped</strong></li>
-        <li><span>Stage</span><strong>In production</strong></li>
-      </ul>
+      <p class="intro">Claude and other AI tools sit inside the ordinary loop of a small studio: drafting, building, and checking the work. They shorten some steps. They do not replace the people making the games and the tools.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Draft</h3>
+          <p>Notes, interface copy, and internal writing often begin with Claude or another model. We rewrite until the words belong to the studio.</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>Build</h3>
+          <p>Game code, refactors, and the developer tools around a project are written with AI assistance. What we keep is read in the codebase, not accepted from a chat window.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>Decide</h3>
+          <p>A model can point at a rough edge. What is fun, what is finished, and what is ready to show someone else is still a human call.</p>
+        </article>
+      </div>
+      <p class="note">We describe the practice here. We do not publish performance figures.</p>
     </div>
   </section>
 
@@ -178,10 +120,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="wrap">
       <div class="head">
         <div class="label">Contact</div>
-        <h2>Write to the studio.</h2>
+        <h2>Building quietly — contact us.</h2>
       </div>
-      <p>Press, partners, and players are all welcome.</p>
-      <a class="btn" href="mailto:jeff@auroratech-ai.com?subject=Hello%20Aurora%20Tech">Send note &rarr;</a>
+      <p>Questions for the studio go to one address.</p>
+      <a class="btn" href="mailto:jeff@auroratech-ai.com?subject=Hello%20Aurora%20Tech">Send a note &rarr;</a>
       <a class="mail" href="mailto:jeff@auroratech-ai.com">jeff@auroratech-ai.com</a>
     </div>
   </section>
@@ -189,15 +131,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>Aurora Tech — games for Steam and Epic.</span>
+    <span>Aurora Tech · www.auroratech-ai.com</span>
+    <a href="/privacy.html">Privacy</a>
     <span>&copy; 2026 Aurora Tech</span>
   </div>
 </footer>
 
-<script>
-  const h=document.getElementById('top');
-  const f=()=>h.classList.toggle('scrolled',scrollY>40);
-  addEventListener('scroll',f,{passive:true});f();
-</script>
+<script src="/site.js"></script>
 </body>
 </html>
